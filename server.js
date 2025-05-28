@@ -22,7 +22,7 @@ mongoose
   .then(() => console.log("DB Connect"))
   .catch((err) => console.error({ message: err }));
 
-const port = 8080;
+const port = process.env.PORT || 3000;
 
 app.use("/app", routes);
 
